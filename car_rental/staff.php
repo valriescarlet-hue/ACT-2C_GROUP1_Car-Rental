@@ -70,7 +70,7 @@ $rejected_count = $conn->query("SELECT (SELECT COUNT(*) FROM bookings WHERE book
             <div class="topbar-right">
                 <span class="staff-name">Staff Administrator</span>
 
-                <a href="login.php"class="logout-btn" onclick="logout()">
+                <a href="logout.php"class="logout-btn" onclick="logout()">
                     Logout
                 </a>
             </div>

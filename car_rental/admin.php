@@ -1,6 +1,10 @@
-<?phpsession_start();if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'dmin') {header("Location: login.html");exit();}?>
-
-
+<?php
+session_start();
+if (!isset($_SESSION['user_id']) || !in_array($_SESSION['role'] ?? '', ['admin'])) {
+    header("Location: login.html");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +12,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JCLMR Drive | Admin Dashboard</title>
     <link rel="stylesheet" href="admin.css">
-    <script src="app.js" defer></script>
 </head>
 <body data-role="admin">
 
@@ -29,7 +32,7 @@
         <div class="sidebar-bottom">
             <p>Logged in as</p>
             <strong>Administrator</strong>
-            <a href="login.php" class="switch-link">Log out→</a>
+            <a href="logout.php" class="switch-link">Log out→</a>
         </div>
     </aside>
 
@@ -49,6 +52,6 @@
         <section id="content" class="content"></section>
     </main>
 </div>
-<script src=" admin.js"></script>
+<script src="admin.js"></script>
 </body>
 </html>

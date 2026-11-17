@@ -199,7 +199,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'customer') {
                 <button onclick="closeLogoutModal()" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-[#263554] text-sm font-semibold transition-all">
                     Cancel
                 </button>
-                <a href="login.php" class="px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white text-sm font-semibold transition-all shadow-lg shadow-red-600/25">
+                <a href="logout.php" class="px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white text-sm font-semibold transition-all shadow-lg shadow-red-600/25">
                     Yes, Log Out
                 </a>
             </div>
